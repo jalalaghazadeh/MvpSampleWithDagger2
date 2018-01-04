@@ -17,7 +17,8 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 /**
- * Created by janisharali on 25/12/16.
+ * DbHelper class that extends the SQLiteOpenHelper. This class will be responsible for all the DB
+ * related operations.
  */
 
 @Singleton
@@ -31,6 +32,10 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String USER_COLUMN_USER_CREATED_AT = "created_at";
     public static final String USER_COLUMN_USER_UPDATED_AT = "updated_at";
 
+    /*
+     * @DatabaseInfo qualifier helps the dagger to distinguish between String and Integer
+     * Dependencies from existing same types in the dependency graph.
+     */
     @Inject
     public DbHelper(@ApplicationContext Context context,
                     @DatabaseInfo String dbName,

@@ -6,7 +6,9 @@ import java.lang.annotation.RetentionPolicy;
 import javax.inject.Qualifier;
 
 /**
- * Created by janisharali on 08/12/16.
+ * @DatabaseInfo qualifier helps the dagger to distinguish between
+ * String and Integer Dependencies from existing same types in the
+ * dependency graph.
  */
 
 @Qualifier

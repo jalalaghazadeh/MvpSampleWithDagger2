@@ -10,7 +10,9 @@ import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by janisharali on 08/12/16.
+ * To provide the dependency for a class we have to create a Module class. This class defines the
+ * methods that provide the dependency. A Module class is identified by @Module and the dependency
+ * provider method in identified by @Provides .
  */
 
 @Module

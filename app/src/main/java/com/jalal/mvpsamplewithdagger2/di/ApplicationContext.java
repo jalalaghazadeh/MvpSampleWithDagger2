@@ -6,7 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import javax.inject.Qualifier;
 
 /**
- * Created by janisharali on 25/12/16.
+ * @ApplicationContext Qualifier facilitates DbHelper to get the
+ * context object of the application from dagger’s dependency graph
  */
 
 @Qualifier

@@ -17,7 +17,8 @@ import dagger.Component;
 
 
 /**
- * Created by janisharali on 08/12/16.
+ * ApplicationComponent is an interface that is implemented by Dagger2. Using @Component we specify
+ * the class to be a Component.
  */
 
 @Singleton
@@ -30,6 +31,12 @@ public interface ApplicationComponent {
     Context getContext();
 
     Application getApplication();
+
+    /**
+     * In order to figure out the dependencies that a Module has to provide, we have to scan all
+     * the classes in the graph that needs to be provided with dependencies and then figure out the
+     * least number of objects that has to be provided.
+     */
 
     DataManager getDataManager();
 

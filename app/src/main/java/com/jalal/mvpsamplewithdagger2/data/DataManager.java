@@ -11,7 +11,11 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 /**
- * Created by janisharali on 25/12/16.
+ * @Singleton ensure a single instance of a class globally.
+ * So, there will be only one DbHelper class instance for the
+ * app and whenever a class asks for DbHelper as a dependency,
+ * it will be provided with the same instance that is maintained
+ * in the Dagger’s dependency graph.
  */
 
 @Singleton
@@ -20,6 +24,11 @@ public class DataManager {
     private Context mContext;
     private DbHelper mDbHelper;
     private SharedPrefsHelper mSharedPrefsHelper;
+
+    /**
+     * @Inject on the constructor instructs the Dagger to accumulate
+     * all the parameter dependencies when the class is being constructed.
+     */
 
     @Inject
     public DataManager(@ApplicationContext Context context,

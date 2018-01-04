@@ -24,6 +24,12 @@ public class ApplicationModule {
         mApplication = app;
     }
 
+    /**
+     * Thus @Qualifier is used to distinguish between objects of the same type but with different
+     * instances. In this sample, we have ActivityContext and ApplicationContext so that the
+     * Context object being injected can refer to the respectiveContext type.
+     */
+
     @Provides
     @ApplicationContext
     Context provideContext() {
